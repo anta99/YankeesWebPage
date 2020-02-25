@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css?family=Play&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Arbutus+Slab|Lusitana&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ebebeb;
+}
+
+img {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lusitana", serif;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  font-family: "Lusitana", serif;
+  margin: 0;
+}
+
+.col-12 {
+  padding: 0px;
+}
+
+header {
+  background-color: #132448;
+}
+
+.navbar {
+  background-color: #132448;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 999;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.navscroll {
+  padding: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 22px;
+}
+
+.navbar-toggler i {
+  color: #fff;
+  font-size: 30px;
+}
+
+.headSlide {
+  position: relative;
+  margin-top: 110px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../images/team.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/team.jpg");
+  background-size: cover;
+  background-position: top center;
+  height: 95vh;
+  background-color: #132448;
+}
+
+.naslov {
+  text-align: center;
+  padding-top: 35vh;
+}
+
+.naslov h1 {
+  font-size: 80px;
+  font-family: "Lusitana", serif;
+  color: #fff;
+}
+
+@media screen and (max-width: 650px) {
+  .naslov h1 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .naslov {
+    padding-top: 15vh;
+  }
+}
+
+.headLinks {
+  font-size: 35px;
+  background-color: #132448;
+  padding: 10px 40px;
+  margin: 10px auto;
+}
+
+.sectionHeading {
+  font-family: 'Arbutus Slab', serif;
+}
+
+.sectionHeading h2 {
+  font-size: 50px;
+}
+
+.newsImage {
+  border: 1px solid silver;
+}
+
+.image {
+  margin-bottom: 10px;
+}
+
+.image h3 {
+  color: #000;
+  font-size: 25px;
+}
+
+.textContainer {
+  border: 1px solid silver;
+  overflow: hidden;
+}
+
+.newsText {
+  position: relative;
+}
+
+.newsText p {
+  font-size: 22px;
+}
+
+.newsText h2 {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .newsText h2 {
+    font-size: 30px;
+  }
+}
+
+.newsSlide {
+  -webkit-animation: newsSlide 1s forwards;
+          animation: newsSlide 1s forwards;
+}
+
+@-webkit-keyframes newsSlide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes newsSlide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+.player {
+  text-align: center;
+  position: relative;
+}
+
+.player thead {
+  background-color: #132448;
+  color: #fff;
+  text-align: center;
+}
+
+.player thead th {
+  cursor: pointer;
+}
+
+.player thead th::-moz-selection {
+  background-color: none;
+}
+
+.player thead th::selection {
+  background-color: none;
+}
+
+.player img {
+  width: 55px;
+}
+
+#playerSearch {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 10%;
+  border: 1px solid #132448;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#playerSearch:focus {
+  width: 20%;
+}
+
+@media screen and (max-width: 800px) {
+  #playerSearch {
+    width: 100%;
+  }
+  #playerSearch:focus {
+    width: 100%;
+  }
+}
+
+select {
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  select {
+    width: 70%;
+  }
+}
+
+.filters i, .filters span {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+#notFound {
+  font-size: 45px;
+  margin: 3vh;
+}
+
+/*#tickets{
+    background-image: url("../images/stadium.png");
+    background-size: cover;
+    background-position: center;
+}*/
+#tickets {
+  background-color: #fff;
+  border-bottom: 2px solid #132448;
+}
+
+.ticket {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid transparent;
+}
+
+.ticket:hover {
+  -webkit-box-shadow: 2px 5px 10px silver;
+          box-shadow: 2px 5px 10px silver;
+  border-color: #f4f4f4;
+}
+
+@media screen and (max-width: 500px) {
+  .ticket {
+    font-size: 16px;
+  }
+}
+
+.font-weight-bold {
+  font-size: 22px;
+}
+
+.radioBtn {
+  position: relative;
+}
+
+.radioBtn input {
+  display: none;
+}
+
+.radioBtn label {
+  border: 2px solid #132448;
+  padding: 10px 20px;
+  margin: 10px 0px;
+  cursor: pointer;
+}
+
+.order {
+  background-color: #132448;
+  border-color: #132448;
+}
+
+.order:hover {
+  background-color: #ebebeb;
+  color: #132448;
+}
+
+.order:focus {
+  background-color: #132448 !important;
+  color: #fff;
+}
+
+.active {
+  background-color: #132448;
+  color: #fff;
+}
+
+.ticketButton {
+  padding: 10px 20px;
+  border: 2px solid #132448;
+  border-radius: 0px;
+  margin: 0px;
+}
+
+.btn {
+  vertical-align: baseline;
+}
+
+.slider-container {
+  margin: 10px auto;
+}
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.galleryImg img {
+  -webkit-transition: .8s ease-in-out;
+  transition: .8s ease-in-out;
+}
+
+.galleryImg img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+footer {
+  background-color: #132448;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.ticketsHeading {
+  margin: 120px 0px;
+  font-family: "Lusitana", serif;
+}
+
+.ticketsHeading h1 {
+  font-size: 80px;
+}
+
+.selectTicket {
+  border-bottom: 2px solid #132448;
+}
+
+.totalPrice {
+  font-size: 30px;
+  padding: 20px 0px;
+  margin: 0px;
+}
+
+.fa-close {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  z-index: 999;
+}
+
+.fa-close::before {
+  font-size: 30px;
+}
+
+#buy {
+  background-color: #132448;
+  color: #fff;
+  border: 2px solid transparent;
+  padding: 0px 40px;
+}
+
+@media screen and (max-width: 500px) {
+  #buy {
+    padding: 0px 20px;
+  }
+}
+
+#buy:hover {
+  border-color: #132448;
+  background-color: transparent;
+  color: #132448;
+}
+/*# sourceMappingURL=style.css.map */

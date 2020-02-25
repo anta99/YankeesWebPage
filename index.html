@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta keywords="yankees,roster,stats,baseball" /> 
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!--My CSS-->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!--Font Awesome CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Yankees site</title>
+</head>
+<body>
+    <header>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-lg menu">
+                        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" class="logo" alt=""></a>
+                        <button class="navbar-toggler" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                          </ul>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid headSlide">
+            <div class="row">
+                <div class="col-12 col-md-6 m-auto naslov">
+                    <h1>New York Yankees</h1>
+                    <a class="d-inline-block headLinks" href="#">Tickets</a>
+                    <a class="d-inline-block headLinks" href="#roster">Team</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container-fluid p-3 p-md-5" id="news">
+            <div class="row">
+                <div class="col-12 sectionHeading">
+                    <h2>News</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-11 col-md-6 col-lg-2 d-sm-inline-block mx-auto newsImage p-2 order-last order-md-first">
+                </div>
+                <div class="col-11 col-md-6 col-lg-10 textContainer mx-auto">
+            </div>
+            </div>
+        </section>
+        <section class="container-fluid p-3 p-md-5" id="roster">
+            <article class="row">
+                <div class="col-12 sectionHeading">
+                    <h2>Roster</h2>
+                </div>
+            </article>
+                <div class="row">
+                    <div class="col-12 text-center text-md-right pr-5 filters">
+                        <!--<span>Filter roster</span>-->
+                        <input type="text" id="playerSearch" placeholder="Search for player...">
+                        <select name="" id="statFilter">
+                            <option value="0">Sort by</option>
+                        </select>
+                        <i class="fa fa-sort-amount-desc sort text-primary" data-order="desc"></i>
+                        <i class="fa fa-sort-amount-asc sort" data-order="asc" aria-hidden="true"></i>
+                    </div> 
+                </div>  
+                <div class="table-responsive table-hover">      
+                    <table class="table player">
+                      <thead>
+                        <tr>
+                          <th title="Player number" data-criteria="number">#</th>
+                          <th></th>
+                          <th title="Player name" data-criteria="name">Name</th>
+                          <th title="Player country">Country</th>
+                          <th title="Player age">Age</th>
+                          <th title="Games">G</th>
+                          <th title="At-Bat">AB</th>
+                          <th title="Runs">R</th>
+                          <th title="Hits">H</th>
+                          <th title="Home Runs">HR</th>
+                          <th title="Runs Batted In">RBI</th>
+                          <th title="Stolen Base">SB</th>
+                          <th title="Batting Average">AVG</th>
+                          <th title="On-base Percentage">OBP</th>
+                          <th title="On Base Plus Slugging">OPS</th>
+                          <th title="Teams">Teams</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                    </div>
+        </section>
+        <section class="container-fluid p-3 p-md-5" id="tickets">
+            <article class="row">
+                <div class="col-12 sectionHeading">
+                    <h2>Tickets</h2>
+                </div>
+            </article>
+            <article class="row">
+                <div class="col-12 text-center">
+                    <button type="button" class="btn ticketButton">
+                        Selected tickets: <span class="badge badge-light">0</span>
+                      </button>
+                    <span class="radioBtn">
+                        <input type="radio" value="all" name="game" id="all" />
+                        <label for="all" class="active">All</label></span>
+                    <span class="radioBtn">
+                        <input type="radio" value="home" name="game" id="home" />
+                        <label for="home">Home</label>
+                    </span>
+                    <span class="radioBtn">
+                        <input type="radio" value="away" name="game" id="away" />
+                        <label for="away">Away</label>
+                    </span>
+                </div>
+            </article>
+            <article class="container tickets">
+                <!-- Ticket
+                <section class="row w-sm-75 ticket p-3 mt-5 mx-auto">
+                    <div class="col-12 col-md-4 mx-auto">
+                        <p class="font-weight-bold">Feb 21</p>
+                        <p>Mon: 7:30 PM</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <p class="font-weight-bold">Indiana Pacers at New York Knicks</p>
+                        <p>Yankees Stadium-New York</p>
+                    </div>
+                    <div class="col-12 col-md-2 text-center">
+                        <span class="font-weight-bold pt-2">79$</span>
+                        <button type="button" class="btn order btn-primary mt-2 ml-3">Order <i class="fa fa-ticket"></i></button>
+                    </div>
+                </section>
+                end Ticket -->
+                
+            </article>
+        </section>
+        <section class="container-fluid p-3 p-md-5" id="highlights">
+            <article class="row">
+                <div class="col-12 sectionHeading">
+                    <h2>Highlights</h2>
+                </div>
+            </article>
+            <article class="row slider">
+                
+                    
+                        <!--<li>
+                          <img src="assets/images/gallery1(2).jpg" alt="slide1"/>
+                        </li>
+                        <li>
+                          <img src="assets/images/gallery2(1).jpg" alt="slide2"/>
+                        </li>
+                        <li>
+                          <img src="assets/images/gallery3.jpg" alt="slide3"/>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery4(1).jpg" alt="slide1"/>
+                          </li>
+                          <li>
+                            <img src="assets/images/gallery5(1).jpg" alt="slide2"/>
+                          </li>
+                          <li>
+                            <img src="assets/images/gallery6(1).jpg" alt="slide3"/>
+                          </li>
+                          <li>
+                            <img src="assets/images/gallery7(1).jpg" alt="slide1"/>
+                          </li>
+                          <li>
+                            <img src="assets/images/gallery8(1).jpg" alt="slide2"/>
+                          </li>-->
+                      
+
+                
+            </article>
+        </section>
+    </main>
+    <footer class="container-fluid p-5">
+        <div class="row">
+            <div class="col-md-6 col-12 text-center">
+                <p>Join us on top social media networks</p>
+            </div>
+            <!--<div class="col-lg-6 col-6">
+                <ul class="navbar-nav">
+                        
+                </ul>
+            </div>-->
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

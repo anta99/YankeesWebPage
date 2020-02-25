@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta keywords="yankees,roster,stats,baseball" /> 
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!--My CSS-->
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <!--Font Awesome CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Yankees site</title>
+</head>
+<body>
+    <header>
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-lg menu">
+                        <a class="navbar-brand" href="#"><img src="assets/images/logo.png" class="logo" alt=""></a>
+                        <button class="navbar-toggler" type="button">
+                            <i class="fa fa-navicon"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav">
+                          </ul>
+                        </div>
+                      </nav>
+                </div>
+            </div>
+        </section>
+        <!--<div class="container-fluid ticketSlide">
+            <div class="row">
+                <div class="col-12">
+                    <img src="assets/images/stadium.jpg" alt="" />
+                    <div id="ticketHead">
+                        <h1>Tickets</h1>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </header>
+    <main>
+        <section class="container-fluid ticketsHeading text-center">
+            <article class="row">
+                <div class="col-12">
+                    <h1>Tickets</h1>
+                </div>
+            </article>
+        </section>
+        <section class="container-fluid sectionHeading">
+            <article class="row">
+                <div class="col-12 p-5">
+                    <h2>Selected tickets</h2>
+                </div>
+            </article>
+        </section>
+        <section class="container">
+            <article class="row mt-5 selectTicket position-relative">
+                <div class="col-10 col-md-8">
+                    <p class="font-weight-bold">1.Indiana Pacers at New York Knicks</p>
+                    <span>Yankees Stadium-New York</span>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <button type="button" class="btn order btn-primary mt-2 m-3 oneless">-</button>
+                    <span class="number">1</span>
+                    <button type="button" class="btn order btn-primary mt-2 ml-3 onemore" >+</button>
+                    <span class="font-weight-bold pt-2 ml-3"><span class="price font-weight-bold">100</span>$</span>
+                   
+                </div>
+                <i class="fa fa-close remove text-right ml-5"></i>
+            </article>
+            <article class="row mt-5 selectTicket position-relative">
+                <div class="col-10 col-md-8">
+                    <p class="font-weight-bold">1.Indiana Pacers at New York Knicks</p>
+                    <span>Yankees Stadium-New York</span>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <button type="button" class="btn order btn-primary mt-2 m-3 oneless">-</button>
+                    <span class="number">1</span>
+                    <button type="button" class="btn order btn-primary mt-2 ml-3 onemore" >+</button>
+                    <span class="font-weight-bold pt-2 ml-3"><span class="price font-weight-bold">50</span>$</span>
+                    
+                </div>
+                <i class="fa fa-close remove text-right ml-5"></i>
+            </article>
+            <article class="row mt-5 selectTicket position-relative">
+                <div class="col-10 col-md-8">
+                    <p class="font-weight-bold">1.Indiana Pacers at New York Knicks</p>
+                    <span>Yankees Stadium-New York</span>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <button type="button" class="btn order btn-primary mt-2 m-3 oneless">-</button>
+                    <span class="number">1</span>
+                    <button type="button" class="btn order btn-primary mt-2 ml-3 onemore" >+</button>
+                    <span class="font-weight-bold pt-2 ml-3"><span class="price font-weight-bold">200</span>$</span>
+                    
+                </div>
+                <i class="fa fa-close remove text-right ml-5"></i>
+            </article>
+            <article class="col-12 text-right font-weight-bold totalPrice">
+                <span>Total: <span id="total">1000</span>$ </span><button id="buy">Buy</button>
+                
+            </article>
+        </section>
+    </main>
+    <footer class="container-fluid p-5">
+        <div class="row">
+            <div class="col-md-6 col-12 text-center">
+                <p>Join us on top social media networks</p>
+            </div>
+            <!--<div class="col-lg-6 col-6">
+                <ul class="navbar-nav">
+                        
+                </ul>
+            </div>-->
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

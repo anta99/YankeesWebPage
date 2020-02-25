@@ -1,0 +1,132 @@
+[
+    {
+        "matchId":1,
+        "dateTime":{
+            "date":"2020-02-26",
+            "time":"1:30"
+        },
+        "guestTeam":"Washington Nationals",
+        "homeTeam":"New York Yankees",
+        "stadium":"Yankee Stadium",
+        "state":"New York",
+        "homeGame":true,
+        "price":79
+    },
+    {
+        "matchId":2,
+        "dateTime":{
+            "date":"2020-02-27",
+            "time":"4:30"
+        },
+        "guestTeam":"New York Yankees",
+        "homeTeam":"Tampa Bay Rays",
+        "stadium":"Tropicana Field",
+        "state":"Florida",
+        "homeGame":false,
+        "price":65
+    },
+    {
+        "matchId":3,
+        "dateTime":{
+            "date":"2020-02-29",
+            "time":"3:05"
+        },
+        "guestTeam":"Detroit Tigers",
+        "homeTeam":"New York Yankees",
+        "stadium":"Yankee Stadium",
+        "state":"New York",
+        "homeGame":true,
+        "price":70
+    },
+    {
+        "matchId":4,
+        "dateTime":{
+            "date":"2020-03-03",
+            "time":"7:30"
+        },
+        "guestTeam":"Boston Red Sox",
+        "homeTeam":"New York Yankees",
+        "stadium":"Yankee Stadium",
+        "state":"New York",
+        "homeGame":true,
+        "price":100
+    },
+    {
+        "matchId":5,
+        "dateTime":{
+            "date":"2020-03-14",
+            "time":"1:05"
+        },
+        "guestTeam":"Philadelphia Phillies",
+        "homeTeam":"New York Yankees",
+        "stadium":"Yankee Stadium",
+        "state":"New York",
+        "homeGame":true,
+        "price":79
+    },
+    {
+        "matchId":6,
+        "dateTime":{
+            "date":"2020-03-20",
+            "time":"5:00"
+        },
+        "guestTeam":"New York Yankees",
+        "homeTeam":"Miami Marlins",
+        "stadium":"Marlins Park",
+        "state":"Florida",
+        "homeGame":false,
+        "price":75
+    },
+    {
+        "matchId":7,
+        "dateTime":{
+            "date":"2020-03-10",
+            "time":"7:00"
+        },
+        "guestTeam":"New York Yankees",
+        "homeTeam":"Toronto Blue Jays",
+        "stadium":"Rogers Centre",
+        "state":"Ontario",
+        "homeGame":false,
+        "price":75
+    },
+    {
+        "matchId":8,
+        "dateTime":{
+            "date":"2020-03-18",
+            "time":"6:00"
+        },
+        "guestTeam":"Pittsburgh Pirates",
+        "homeTeam":"New York Yankees",
+        "stadium":"Yankee Stadium",
+        "state":"New York",
+        "homeGame":true,
+        "price":80
+    },
+    {
+        "matchId":9,
+        "dateTime":{
+            "date":"2020-03-08",
+            "time":"3:30"
+        },
+        "guestTeam":"Atlanta Braves",
+        "homeTeam":"New York Yankees",
+        "stadium":"Yankee Stadium",
+        "state":"New York",
+        "homeGame":true,
+        "price":59
+    },
+    {
+        "matchId":10,
+        "dateTime":{
+            "date":"2020-03-15",
+            "time":"8:30"
+        },
+        "guestTeam":"New York Yankees",
+        "homeTeam":"Minnesota Twins",
+        "stadium":"Target Field",
+        "state":"Minnesota",
+        "homeGame":false,
+        "price":80
+    }
+]
