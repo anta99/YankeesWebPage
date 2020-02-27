@@ -1,5 +1,6 @@
 $(document).ready(function(){
     navWrite(menu,".navbar-nav");
+    footWrite(footer);
     $(window).scroll(navScroll);
     $(".navbar-toggler").click(function(){
         $("#navbarNavDropdown").slideToggle();
@@ -12,8 +13,8 @@ $(document).ready(function(){
     //tickets.html
     if(window.location.href.indexOf("tickets.html")!=-1){
         countTotal();
-        console.log("tu smo");
-        console.log(JSON.parse(localStorage.getItem("tickets")));
+        // console.log("tu smo");
+        // console.log(JSON.parse(localStorage.getItem("tickets")));
         $.ajax({
             url:"players.json",
             method:"GET",
@@ -29,7 +30,6 @@ $(document).ready(function(){
                 newCount=count-1;
 
             }
-
             $(this).parent().find(".number").html(newCount);
             countTotal();
         })
@@ -45,6 +45,16 @@ $(document).ready(function(){
             $(this).parent().remove();
             countTotal();
         });
+        $("#buy").click(function(){
+            $("#coverDiv").show();
+            $("#formContainer").addClass("scaleForm");
+            $("body").addClass("bodyOpacity");
+        });
+        $("#close").click(function(){
+            $("#formContainer").removeClass("scaleForm");
+            $("#coverDiv").hide();
+            $("body").removeClass("bodyOpacity");
+        });
         function countTotal(){
             const allPrices=document.querySelectorAll(".price");
             const allQuantity=document.querySelectorAll(".number");
@@ -54,8 +64,113 @@ $(document).ready(function(){
             }
             document.querySelector("#total").innerHTML=sum;
         }
-        
+        //Regex
+        const form=document.querySelector("#orderForm");
+        const nameRegex=/^[A-Z][a-z]{2,}(\s[A-Z][a-z]{3,})+$/;
+        const name=document.querySelector("#name");
+        const mailRegex=/^[a-z][a-z\.\!\-]{4,}\@([a-z][a-z\.]{2,})+\.[a-z]{2,3}$/;
+        const mail=document.querySelector("#mail");
+        const adressRegex=/^([A-Z][a-z0-9\/\s]{3,})+$/;
+        const adress=document.querySelector("#adress");
+        const radioBtn=document.getElementsByName("payment");
+        const terms=document.querySelector("#terms");
+        const delivery=document.querySelector("#delivery");
+        const paypalMsg=document.querySelector(".paypalMessage");
+        let paymentMethod="";
+        function textBox(regex,target){
+            if(regex.test(target.value)){
+                target.nextElementSibling.classList.remove("errorShow");
+                return 1;
+            }
+            else{
+                target.nextElementSibling.classList.add("errorShow");
+                return 0;
+            }
+        }
+        $("#name").blur(function(){
+            textBox(nameRegex,name);
+        });
+        $("#mail").blur(function(){
+            textBox(mailRegex,mail);
+        });
+        $("#adress").blur(function(){
+            textBox(adressRegex,adress);
+        });
+        $("#delivery").change(ddlCheck);
+        for(let i of radioBtn){
+            i.addEventListener("change",inputPayment);
+        }
+        function inputPayment(){
+            for(let i in radioBtn){
+                if(radioBtn[i].checked){
+                    if(radioBtn[i].value=="paypal"){
+                        paypalMsg.innerHTML="Click to be directed to the PayPal™ site to authorize your payment.";
+                    }
+                    else{
+                        paypalMsg.innerHTML="";
+                    }
+                    radioBtn[i].parentElement.lastElementChild.classList.remove("errorShow");
+                    return 1;
+                }
+            }
+            radioBtn[0].parentElement.lastElementChild.classList.add("errorShow");
+            console.log(radioBtn[0].parentElement.lastElementChild);
+            return 0;
+        }
+        $("input[name=payment]").change(inputPayment);
+        function ddlCheck(){
+            if(delivery.value!="0"){
+                delivery.nextElementSibling.classList.remove("errorShow");
+                return 1;
+            }
+            else{
+                delivery.nextElementSibling.classList.add("errorShow");
+                return 0;
+            }
+        }
+        function finalCheck(){
+            let ok=1;
+            if(!terms.checked){
+                ok=0;
+                terms.parentElement.lastElementChild.classList.add("errorShow");
+            }
+            else{
+                terms.parentElement.lastElementChild.classList.remove("errorShow");            
+            }
+            if(!textBox(nameRegex,name) != ""){
+                ok=0;
+            }
+            if(! textBox(mailRegex,mail)){
+             ok=0;
+            }
+            if(!textBox(adressRegex,adress)){
+             ok=0;
+            }
+            if(!ddlCheck()){
+             ok=0;
+            }
+            if(!inputPayment()){
+             ok=0;
+            }
 
+            ok ? alertSuccess() : console.log("Nesto nije u redu");
+        }
+        $("#order").click(finalCheck);
+        function alertSuccess(){
+            const body=document.querySelector("body");
+            let div=document.createElement("div");
+            div.setAttribute("class","alert");
+            div.setAttribute("class","alert-success");
+            div.innerHTML="Success order!";
+            body.appendChild(div);
+            document.querySelector(".alert-success").classList.add("alert-slide");
+            setTimeout(function(){
+                document.querySelector(".alert-success").remove();
+            },4000);
+            form.reset();
+        }
+        
+        
     }
     //End tickets.html
 
@@ -342,7 +457,7 @@ $(document).ready(function(){
 })
 const menu=[{
     title:"News",
-    link:"#news"
+    link:"index.html/#news"
 },
 {
     title:"Roster",
@@ -356,6 +471,24 @@ const menu=[{
     title:"Highlights",
     link:"#highlights"
 }];
+const footer=[
+    {
+        icon:"fa fa-facebook",
+        link:"https://www.facebook.com/"
+    },
+    {
+        icon:"fa fa-twitter",
+        link:"https://www.twitter.com/"
+    },
+    {
+        icon:"fa fa-instagram",
+        link:"https://www.instagram.com/"
+    },
+    {
+        icon:"fa fa-youtube-play",
+        link:"https://www.facebook.com/"
+    }
+]
 let player;
 function navWrite(res,elem){
     let htmlCode="";
@@ -365,6 +498,17 @@ function navWrite(res,elem){
       </li>`;
     }
     $(elem).html(htmlCode);
+}
+function footWrite(arr){
+    const target=document.querySelector("#navFoot");
+    let html="";
+    for(let i of arr){
+        html+=`<li class="d-inline m-1">
+        <a href="${i.link}" target="_blank"><i class="${i.icon}"></i></a>
+      </li>`;
+    }
+    target.innerHTML=html;
+
 }
 function navScroll(){
     if($(window).scrollTop()>0){

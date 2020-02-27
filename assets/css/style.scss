@@ -13,6 +13,14 @@ $headingFont:'Arbutus Slab', serif;
 body{
     background-color: #ebebeb;
 }
+.btn-primary:disabled{
+    background-color: $maincolor;
+    border-color:transparent;
+    box-shadow: none;
+}
+.bodyOpacity{
+    overflow: hidden;
+}
 img{
     width:100%;
 }
@@ -285,6 +293,9 @@ footer{
     margin-top: 20px;
     color:$white;
 }
+#navFoot{
+    font-size: 30px;
+}
 
 //Ticket.html
 .ticketsHeading{
@@ -306,12 +317,11 @@ footer{
     position: absolute;
     right:15px;
     top:0px;
-    z-index: 999;
     &::before{
         font-size: 30px;
     }
-    
 }
+
 #buy{
     background-color: $maincolor;
     color: $white;
@@ -324,5 +334,91 @@ footer{
         border-color:$maincolor;
         background-color: transparent;
         color: $maincolor;
+    }
+}
+input:focus{
+    box-shadow: none;
+}
+#formContainer{
+    position: relative;
+    background-color: $maincolor;
+    left:0;
+    right:0px;
+    margin: 0px auto;
+    padding:30px;
+    top:15%;
+    border: 2px solid $white;
+    color:$white;
+    z-index: 999;
+    input{
+        border-radius:0px;
+        &:focus{
+            background-color: none;
+            box-shadow: none;
+        }
+    }
+}
+.scaleForm{
+    animation: scaleForm .5s ease-out forwards;
+}
+@keyframes scaleForm{
+    0%{
+        transform: scale(0,0);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+#coverDiv{
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    top:0;
+    overflow-y: scroll;
+    right:0;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 998;
+    display: none;
+}
+.errorMessage{
+    color:red !important;
+    display: none;
+}
+.errorShow{
+    display: block;
+}
+.buy{
+    border: 2px solid $maincolor;
+    background-color: $white;
+    color: $maincolor;
+    padding:10px 30px; 
+    &:hover{
+        background-color: none;
+    }
+}
+.alert-success{
+    position: fixed;
+    left:0%;
+    right:0%;
+    padding:20px;
+    text-align: center;
+    font-size:20px;
+    width:50%;
+    margin:0px auto;
+    background-color: #7ae894;
+    z-index: 999;
+    @media screen and(max-width:800px){
+        width: 100%;
+    }
+}
+.alert-slide{
+    animation:slideUp 1s forwards ease-in-out;
+}
+@keyframes slideUp{
+    0%{
+        top:-50%;
+    }
+    100%{
+        top:20%;
     }
 }

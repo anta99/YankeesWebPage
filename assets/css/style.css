@@ -11,6 +11,17 @@ body {
   background-color: #ebebeb;
 }
 
+.btn-primary:disabled {
+  background-color: #132448;
+  border-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bodyOpacity {
+  overflow: hidden;
+}
+
 img {
   width: 100%;
 }
@@ -360,6 +371,10 @@ footer {
   color: #fff;
 }
 
+#navFoot {
+  font-size: 30px;
+}
+
 .ticketsHeading {
   margin: 120px 0px;
   font-family: "Lusitana", serif;
@@ -383,7 +398,6 @@ footer {
   position: absolute;
   right: 15px;
   top: 0px;
-  z-index: 999;
 }
 
 .fa-close::before {
@@ -407,5 +421,134 @@ footer {
   border-color: #132448;
   background-color: transparent;
   color: #132448;
+}
+
+input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#formContainer {
+  position: relative;
+  background-color: #132448;
+  left: 0;
+  right: 0px;
+  margin: 0px auto;
+  padding: 30px;
+  top: 15%;
+  border: 2px solid #fff;
+  color: #fff;
+  z-index: 999;
+}
+
+#formContainer input {
+  border-radius: 0px;
+}
+
+#formContainer input:focus {
+  background-color: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.scaleForm {
+  -webkit-animation: scaleForm .5s ease-out forwards;
+          animation: scaleForm .5s ease-out forwards;
+}
+
+@-webkit-keyframes scaleForm {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes scaleForm {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+#coverDiv {
+  width: 100%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  overflow-y: scroll;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  display: none;
+}
+
+.errorMessage {
+  color: red !important;
+  display: none;
+}
+
+.errorShow {
+  display: block;
+}
+
+.buy {
+  border: 2px solid #132448;
+  background-color: #fff;
+  color: #132448;
+  padding: 10px 30px;
+}
+
+.buy:hover {
+  background-color: none;
+}
+
+.alert-success {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  width: 50%;
+  margin: 0px auto;
+  background-color: #7ae894;
+  z-index: 999;
+}
+
+@media screen and (max-width: 800px) {
+  .alert-success {
+    width: 100%;
+  }
+}
+
+.alert-slide {
+  -webkit-animation: slideUp 1s forwards ease-in-out;
+          animation: slideUp 1s forwards ease-in-out;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 20%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

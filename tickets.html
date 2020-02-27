@@ -105,11 +105,71 @@
                 
             </article>
         </section>
+        <div id="coverDiv">
+            <section class="container" id="formContainer">
+                <article class="row">
+                    <div class="col-12 text-center mb-2">
+                        <h2>Order form</h2>
+                    </div>
+                    <div class="col-12 col-md-6 mx-auto" >
+                        <form action="" method="POST" name="orderForm" id="orderForm">
+                            <div class="form-group">
+                              <label for="name">Full name</label>
+                              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" />
+                              <span  class="form-text text-muted errorMessage">Enter your name in valid format</span>
+                            </div>
+                            <div class="form-group">
+                              <label for="mail">Email</label>
+                              <input type="text" class="form-control" id="mail" name="mail" placeholder="Enter your email" />
+                              <span  class="form-text text-muted errorMessage">Enter your mail in valid format</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="adress">Address</label>
+                                <input type="text" class="form-control" id="adress" name="address" placeholder="Enter your adress" />
+                                <span  class="form-text text-muted errorMessage">Please enter your address</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="delivery">Tickets type</label>
+                                <select name="delivery" id="delivery">
+                                    <option value="0">Select your tickets type</option>
+                                    <option value="e">Electronic ticket</option>
+                                    <option value="c">Card tickets</option>
+                                </select>
+                                <span  class="form-text text-muted errorMessage">Please select your type of tickets</span>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="payment" id="cash" value="cash">
+                                <label class="form-check-label mr-1 mr-md-3" for="cash">Cash on delivery</label>
+                                <input class="form-check-input" type="radio" name="payment" id="paypal" value="paypal">
+                                <label class="form-check-label" for="paypal">Pay with Paypal</label>
+                                <span  class="form-text text-muted errorMessage ml-1">Please select your type of tickets</span>
+                            </div>
+                            <p class="paypalMessage"></p>
+                            <div class="form-check text-center mt-3">
+                              <input type="checkbox" class="form-check-input" id="terms" name="terms">
+                              <label class="form-check-label" for="exampleCheck1"> I accept Terms of use</label>
+                              <span  class="errorMessage">Accept terms of use</span>
+                            </div>
+                          </form>
+                          <div class="text-center">
+                            <button class="mt-2 buy mx-auto" id="order">Order</button>
+                            <button class="buy mx-auto" id="close">Close</button>
+                          </div>
+                          
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
     <footer class="container-fluid p-5">
         <div class="row">
-            <div class="col-md-6 col-12 text-center">
+            <div class="col-12 text-center">
                 <p>Join us on top social media networks</p>
+                <ul id="navFoot">
+
+                </ul>
+                <p>Created by: Djordje Antanaskovic</p>
+                <span>Documentation</span>
             </div>
             <!--<div class="col-lg-6 col-6">
                 <ul class="navbar-nav">
